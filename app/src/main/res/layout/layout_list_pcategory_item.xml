@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llMain"
+    android:layout_width="150dp"
+    android:layout_height="100dp"
+    android:layout_marginRight="3dp"
+    android:orientation="horizontal"
+    android:layout_marginEnd="3dp">
+
+    <com.rovaind.academy.Utils.views.TextViewAr
+        android:id="@+id/tvLeft"
+        android:layout_width="5dp"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.9">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY" />
+
+            <com.rovaind.academy.Utils.views.TextViewAr
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black_transparent" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <com.rovaind.academy.Utils.views.TextViewAr
+                    android:id="@+id/tvName"
+                    style="@style/txt_white_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="" />
+
+                <com.rovaind.academy.Utils.views.TextViewAr
+                    style="@style/txt_black_micro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/rounded_corner_white"
+                    android:gravity="center"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="3dp"
+                    android:text="@string/view"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="5dp" />
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <com.rovaind.academy.Utils.views.TextViewAr
+        android:id="@+id/tvRight"
+        android:layout_width="3dp"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</LinearLayout>

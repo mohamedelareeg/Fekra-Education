@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.rovaind.academy">
+
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.rovaind.academy.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/academy_mo"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:label">
+        <activity android:name="com.rovaind.academy.auth.CreateTeacherActivity"></activity>
+        <activity android:name="com.rovaind.academy.auth.CreateStudentActivity" />
+        <activity android:name="com.rovaind.academy.auth.SignupActivity" />
+        <activity android:name="com.rovaind.academy.Controllers.OwnedCoursesActivity" />
+        <activity android:name="com.rovaind.academy.Controllers.CategorySelectionActivity" />
+        <activity android:name="com.rovaind.academy.Controllers.ProfileActivity" />
+        <activity android:name="com.rovaind.academy.Controllers.PDFViewerActivity" />
+        <activity android:name="com.rovaind.academy.Controllers.PostCommentsActivity" />
+        <activity android:name="com.rovaind.academy.Controllers.ReplyActivity" />
+        <activity android:name="com.rovaind.academy.auth.FacebookLoginActivity" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.rovaind.academy.Controllers.SliderActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.rovaind.academy.Controllers.SubCategoryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.rovaind.academy.Controllers.SectionActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.rovaind.academy.Controllers.InstructorActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.rovaind.academy.Controllers.SearchActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.rovaind.academy.HomeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.rovaind.academy.VideoPlayer"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.rovaind.academy.Controllers.CourseDetails"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName="com.rovaind.academy.HomeActivity" />
+        <activity
+            android:name="com.rovaind.academy.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.rovaind.academy.Controllers.CategoriesActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.rovaind.academy.Controllers.SubjectCoursesActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.rovaind.academy.Controllers.ExtraCategoryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.rovaind.academy.Controllers.QuizSectionActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.rovaind.academy.Controllers.QuizActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.rovaind.academy.Controllers.CentersActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.rovaind.academy.about.AboutActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.rovaind.academy.about.DevelopersActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name="com.rovaind.academy.Controllers.SettingsActivity" />
+        <activity android:name="com.rovaind.academy.Controllers.GroupDetails" />
+        <activity android:name="com.rovaind.academy.Controllers.PostHomeCommentsActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <service android:name="com.rovaind.academy.manager.fcm.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.rovaind.academy.manager.fcm.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

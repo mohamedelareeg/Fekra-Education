@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/frame_product"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/llMain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.99"
+
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.3">
+
+                        <ImageView
+                            android:id="@+id/ivImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerInside" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|center"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_weight="0.6"
+                        android:gravity="start|center"
+                        android:orientation="vertical">
+
+                        <com.rovaind.academy.Utils.views.TextViewAr
+                            android:id="@+id/tvName"
+                            android:textSize="18sp"
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textAlignment="viewStart"
+                            android:textDirection="locale" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="3dp"
+                            android:layout_marginRight="3dp"
+                            android:gravity="start|center">
+
+                            <com.rovaind.academy.Utils.ratingbar.MaterialRatingBar
+                                android:id="@+id/ratingBar"
+                                style="@style/Widget.MaterialRatingBar.RatingBar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:isIndicator="true"
+                                android:rating="0"
+                                android:stepSize="0.5"
+                                app:mrb_fillBackgroundStars="true"
+                                app:mrb_progressBackgroundTint="@color/star_color"
+                                app:mrb_progressTint="@color/yello" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:gravity="start"
+                            android:orientation="horizontal">
+
+                            <com.rovaind.academy.Utils.views.TextViewAr
+                                android:id="@+id/tvauthor"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="" />
+
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <com.rovaind.academy.Utils.views.TextViewAr
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_table" />
+            </LinearLayout>
+        </FrameLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_below="@+id/frame_product"
+                android:id="@+id/code"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/promo"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="1dp"
+                    android:theme="@style/TextLabegray"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.rovaind.academy.Utils.views.EditTextRegular
+                        android:id="@+id/promo_name"
+                        android:textColor="?android:attr/colorAccent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="12dp"
+                        android:gravity="start"
+                        android:hint="@string/enter_activation_code_to_buy_the_course"
+                        android:textColorHint="?android:attr/colorAccent"
+                        android:paddingBottom="8dp"
+                        android:singleLine="true"
+                        android:maxLength="32"
+                        android:maxLines="1"
+                        android:textAlignment="viewStart"
+                        android:textDirection="locale"
+                        app:drawableStartCompat="@drawable/ic_coupon" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <com.rovaind.academy.Utils.views.TextViewAr
+                    android:padding="8dp"
+                    android:id="@+id/promo_apply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/promo"
+                    android:layout_alignLeft="@+id/promo"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_weight="0.5"
+                    android:background="?android:attr/colorAccent"
+                    android:elevation="40dp"
+                    android:gravity="center"
+                    android:text="@string/apply"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.4"
+                    app:layout_constraintStart_toEndOf="@+id/promo"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:layout_below="@+id/code"
+                android:id="@+id/vailed_code"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <com.rovaind.academy.Utils.views.TextViewAr
+
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:text="@string/vailed_code"
+                    style="@style/fonts"
+                    android:textColor="?android:attr/colorAccent"/>
+
+            </LinearLayout>
+
+
+
+        <Button
+            android:enabled="false"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/vailed_code"
+            android:id="@+id/btn_checkout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="?android:attr/colorAccent"
+            android:textColor="@color/white"
+            android:text="@string/btn_Proceed" />
+    </RelativeLayout>
+
+
+
+
+
+
+
+</RelativeLayout>

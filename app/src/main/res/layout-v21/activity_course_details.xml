@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:orientation="vertical"
+    tools:context=".Controllers.InstructorActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="?android:attr/colorPrimaryDark" />
+
+    <!--Top Header Layout-->
+    <LinearLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        android:orientation="horizontal">
+
+
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <!--Top Profile Section -->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/user_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_arrow_rtl_24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <com.rovaind.academy.Utils.CircleImageView
+                android:id="@+id/OwnerImage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@+id/backButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.rovaind.academy.Utils.views.TextViewAr
+                android:id="@+id/TxtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/loading"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="21sp"
+                android:maxLength="24"
+                app:layout_constraintStart_toEndOf="@+id/OwnerImage"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_below="@+id/topbar">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp">
+
+
+
+            <!--Option Bar-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/circularbordersolid"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.rovaind.academy.Utils.views.TextViewAr
+                    android:id="@+id/personalinfobtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/proximanovaregular"
+                    android:gravity="center"
+                    android:padding="13dp"
+                    android:text="@string/course_info"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:background="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                <com.rovaind.academy.Utils.views.TextViewAr
+                    android:id="@+id/contentbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/proximanovaregular"
+                    android:gravity="center"
+                    android:padding="13dp"
+                    android:text="@string/course_content"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/lightgrey" />
+
+                <com.rovaind.academy.Utils.views.TextViewAr
+                    android:id="@+id/pdfcontentbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/proximanovaregular"
+                    android:gravity="center"
+                    android:padding="13dp"
+                    android:text="@string/others_course_content"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+
+
+            </LinearLayout>
+
+            <!--Bootom Cards with sections-->
+            <LinearLayout
+                android:id="@+id/personalinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+
+                <!--Contact Details-->
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/circularbordersolid"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.rovaind.academy.Utils.views.TextViewAr
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/teacher_posts"
+                            android:textSize="17sp"
+                            android:fontFamily="@font/proximanovaregular"
+                            android:textStyle="bold" />
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <com.rovaind.academy.Utils.views.TextViewAr
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/edit"
+                            android:textColor="?android:attr/colorAccent"
+                            android:layout_marginEnd="10dp"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+android:visibility="gone"
+                        android:id="@+id/teacherposts_list_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/teacher_posts_item"/>
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.rovaind.academy.Utils.views.TextViewAr
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/course_info"
+                            android:textSize="17sp"
+                            android:fontFamily="@font/proximanovaregular"
+                            android:textStyle="bold" />
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <com.rovaind.academy.Utils.views.TextViewAr
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/edit"
+                            android:textColor="?android:attr/colorAccent"
+                            android:layout_marginEnd="10dp"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="8dp"
+                            android:paddingStart="8dp"
+                            android:paddingRight="8dp"
+                            android:paddingEnd="8dp">
+
+                            <ImageView
+                                android:layout_width="29dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/circular_grey_bordersolid"
+                                android:padding="10dp"
+                                app:srcCompat="@drawable/ic_tv_24dp" />
+
+                            <com.rovaind.academy.Utils.views.TextViewAr
+                                android:id="@+id/TxtLectureCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="@string/loading"
+                                android:textSize="15sp"
+                                android:textColor="@color/goodgrey"
+                                android:fontFamily="@font/proximanovaregular"
+                                android:layout_marginStart="20dp" />
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--Skills Details-->
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/teacherPanel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/circularbordersolid"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.rovaind.academy.Utils.views.TextViewAr
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/about_Instructor"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+
+                        <com.rovaind.academy.Utils.views.TextViewAr
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/view"
+                            android:textColor="?android:attr/colorAccent"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:paddingRight="8dp"
+                            android:paddingEnd="8dp">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/circular_grey_bordersolid"
+                                android:padding="10dp"
+                                app:srcCompat="@drawable/ic_desc_24dp" />
+
+                            <com.rovaind.academy.Utils.views.TextViewAr
+                                android:id="@+id/TXTInstructorName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="@string/loading"
+                                android:textSize="15sp"
+                                android:layout_marginStart="20dp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="8dp"
+                            android:paddingStart="8dp"
+                            android:paddingRight="8dp"
+                            android:paddingEnd="8dp">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/circular_grey_bordersolid"
+                                android:padding="10dp"
+                                app:srcCompat="@drawable/ic_position_24dp" />
+
+                            <com.rovaind.academy.Utils.views.TextViewAr
+                                android:id="@+id/TXTInstructorPosition"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="@string/loading"
+                                android:textSize="15sp"
+                                android:layout_marginStart="20dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="8dp"
+                            android:paddingStart="8dp"
+                            android:paddingRight="8dp"
+                            android:paddingEnd="8dp">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/circular_grey_bordersolid"
+                                android:padding="10dp"
+                                app:srcCompat="@drawable/ic_phone_24dp" />
+
+                            <com.rovaind.academy.Utils.views.TextViewAr
+                                android:id="@+id/TxtPhone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="@string/loading"
+                                android:textSize="15sp"
+                                android:layout_marginStart="20dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="8dp"
+                            android:paddingStart="8dp"
+                            android:paddingRight="8dp"
+                            android:paddingEnd="8dp">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/circular_grey_bordersolid"
+                                android:padding="10dp"
+                                app:srcCompat="@drawable/ic_location_24dp" />
+
+                            <com.rovaind.academy.Utils.views.TextViewAr
+                                android:id="@+id/TxtLocation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="@string/loading"
+                                android:textSize="15sp"
+                                android:layout_marginStart="20dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Experience Bottom Cards-->
+            <LinearLayout
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/circularbordersolid"
+                    android:orientation="horizontal"
+                    android:padding="20dp">
+
+                    <com.rovaind.academy.Utils.countdownview.CountdownView
+                        android:visibility="gone"
+                        android:padding="5dp"
+                        android:id="@+id/cv_countdownView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/red_900"
+                        app:isShowDay="true"
+                        app:isShowHour="true"
+                        app:isShowMillisecond="false"
+                        app:isShowMinute="false"
+                        app:isShowSecond="false"
+                        app:suffixGravity="bottom"
+                        app:suffixDay="Days"
+                        app:suffixMinuteLeftMargin="5dp"
+                        app:suffixMinuteRightMargin="10dp"
+                        app:suffixHour="Hours"
+                        app:suffixSecondLeftMargin="5dp"
+                        app:suffixTextColor="#FFF"
+                        app:suffixTextSize="10sp"
+                        app:timeTextColor="#FFF"
+                        app:timeTextSize="20sp"/>
+                    <com.rovaind.academy.Utils.ExpandableRecyclerView
+                        android:layout_below="@+id/cv_countdownView"
+                        android:id="@+id/lesson_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </com.rovaind.academy.Utils.ExpandableRecyclerView>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/buyPanel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/circularbordersolid"
+                    android:orientation="horizontal"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+
+                            app:srcCompat="@drawable/ic_shopping_bag" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="vertical"
+                            android:layout_marginStart="10dp">
+
+                            <com.rovaind.academy.Utils.views.TextViewAr
+                                android:id="@+id/BtnBuy"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+
+                                android:background="@color/black"
+                                android:fontFamily="@font/nunito_bold"
+                                android:gravity="center"
+                                android:text="@string/buynow"
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp"
+                               />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <!--Experience Bottom Cards-->
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/content_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/circularbordersolid"
+                    android:orientation="horizontal"
+                    android:padding="20dp">
+
+                    <com.rovaind.academy.Utils.countdownview.CountdownView
+                        android:visibility="gone"
+                        android:padding="5dp"
+                        android:id="@+id/cv_countdownView_"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/red_900"
+                        app:isShowDay="true"
+                        app:isShowHour="true"
+                        app:isShowMillisecond="false"
+                        app:isShowMinute="false"
+                        app:isShowSecond="false"
+                        app:suffixGravity="bottom"
+                        app:suffixDay="Days"
+                        app:suffixMinuteLeftMargin="5dp"
+                        app:suffixMinuteRightMargin="10dp"
+                        app:suffixHour="Hours"
+                        app:suffixSecondLeftMargin="5dp"
+                        app:suffixTextColor="#FFF"
+                        app:suffixTextSize="10sp"
+                        app:timeTextColor="#FFF"
+                        app:timeTextSize="20sp"/>
+                    <com.rovaind.academy.Utils.ExpandableRecyclerView
+                        android:layout_below="@+id/cv_countdownView_"
+                        android:id="@+id/lesson_recycler_"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </com.rovaind.academy.Utils.ExpandableRecyclerView>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/buyPanel_"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/circularbordersolid"
+                    android:orientation="horizontal"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+
+                            app:srcCompat="@drawable/ic_shopping_bag" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="vertical"
+                            android:layout_marginStart="10dp">
+
+                            <com.rovaind.academy.Utils.views.TextViewAr
+                                android:id="@+id/BtnBuy_"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+
+                                android:background="@color/black"
+                                android:fontFamily="@font/nunito_bold"
+                                android:gravity="center"
+                                android:text="@string/buynow"
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp"
+                                />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <!--Review Bottom Cards-->
+            <LinearLayout
+                android:id="@+id/review"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/circularbordersolid"
+                    android:orientation="horizontal"
+                    android:padding="20dp">
+                    <LinearLayout
+
+                        android:id="@+id/publishPanel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                       >
+
+                        <LinearLayout
+                           android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical">
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="vertical"
+                                android:layout_marginStart="10dp">
+
+                                <com.rovaind.academy.Utils.views.TextViewAr
+                                    android:id="@+id/publish_photo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+
+                                    android:background="@drawable/send_comment_button_bg"
+                                    android:fontFamily="@font/nunito_bold"
+                                    android:gravity="center"
+                                    android:text="@string/ask_now"
+                                    android:textAlignment="center"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18sp"
+                                    />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_below="@id/publishPanel"
+                    android:id="@+id/blog_list_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</RelativeLayout>

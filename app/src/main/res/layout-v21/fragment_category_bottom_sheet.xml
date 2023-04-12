@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:background="?android:colorPrimaryDark"
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        >
+        <com.rovaind.academy.Utils.shimmer.ShimmerFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/parentShimmerLayoutcategory"
+            android:duration="700">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <include layout="@layout/layout_category_placeholder" />
+
+                <include layout="@layout/layout_category_placeholder" />
+
+                <include layout="@layout/layout_category_placeholder" />
+
+                <include layout="@layout/layout_category_placeholder" />
+
+
+            </LinearLayout>
+        </com.rovaind.academy.Utils.shimmer.ShimmerFrameLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_margin="5dp"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/slider_cata"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+
+
+            />
+    </RelativeLayout>
+
+
+
+
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/background"
+        android:id="@+id/btn_checkout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="?android:attr/colorAccent"
+        android:textColor="@color/white"
+        android:text="@string/btn_close" />
+
+</RelativeLayout>

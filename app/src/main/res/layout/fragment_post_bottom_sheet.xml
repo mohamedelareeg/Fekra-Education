@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_proceed" />
+
+    <EditText
+        android:id="@+id/field_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:autoSizeTextType="uniform"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/write_tweet"
+        android:inputType="textMultiLine"
+        android:maxLines="10"
+        android:scrollHorizontally="false" />
+    <com.rovaind.academy.Utils.views.AutoFitEditText
+
+        android:id="@+id/field_body_txt_photo"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@+id/field_body"
+        android:autoSizeTextType="uniform"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/write_tweet"
+        android:textColorHint="@color/white"
+        android:inputType="textMultiLine"
+        android:maxLength="60"
+        android:textSize="24sp"
+        android:scrollHorizontally="false" />
+
+    <LinearLayout
+        android:layout_below="@+id/product_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="16dp">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+            android:layout_marginEnd="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:srcCompat="@drawable/ic_upload"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/photoSelect"
+            android:layout_marginEnd="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:srcCompat="@drawable/ic_upload_image"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+            android:id="@+id/fab_submit_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            app:srcCompat="@drawable/ic_done"/>
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/field_body_txt_photo"
+        android:id="@+id/instantRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
+        />
+    <ImageView
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/instantRecyclerView"
+        android:id="@+id/product_logo"
+        android:scaleType="fitXY"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        />
+</RelativeLayout>

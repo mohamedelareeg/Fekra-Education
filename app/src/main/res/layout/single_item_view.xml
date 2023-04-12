@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/card_margin"
+
+        android:elevation="3dp">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:background="@color/grey_shimmer"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+
+
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <RatingBar
+
+                    android:id="@+id/ProductRating"
+                    style="@android:style/Widget.Material.Light.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:progressTint="#333333"
+                    android:rating="0"
+                    android:stepSize="1"
+                    app:layout_constraintVertical_bias="0.07999998"
+                    tools:targetApi="lollipop" />
+            </LinearLayout>
+            <LinearLayout
+                android:background="@color/grey_shimmer"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+
+                android:id="@+id/price_panel"
+
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:background="@color/grey_shimmer"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="25dp">
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

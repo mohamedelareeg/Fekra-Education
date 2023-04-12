@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".Controllers.CategorySelectionActivity">
+
+
+
+    <com.rovaind.academy.Utils.views.TextViewAr
+        android:layout_marginTop="100dp"
+        android:id="@+id/TxtClassName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/select_ferka"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:maxLength="32"
+        />
+    <com.rovaind.academy.Utils.ExpandableRecyclerView
+        android:layout_below="@+id/TxtClassName"
+        android:id="@+id/class_recycler"
+        android:layout_marginBottom="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.rovaind.academy.Utils.ExpandableRecyclerView>
+
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <com.rovaind.academy.Utils.views.TextViewAr
+            android:id="@+id/btnSelectClass"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:background="@drawable/send_comment_button_bg"
+            android:fontFamily="@font/nunito_bold"
+            android:gravity="center"
+            android:text="@string/confirm"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:enabled="false"
+            />
+
+    </LinearLayout>
+</RelativeLayout>

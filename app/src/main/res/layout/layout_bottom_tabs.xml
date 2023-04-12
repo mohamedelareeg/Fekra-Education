@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.moos.navigation.BottomBarLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tabs"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    app:tabs_arrange_way="horizontal"
+    android:elevation="2dp"
+    android:layout_alignParentBottom="true">
+
+</com.moos.navigation.BottomBarLayout>

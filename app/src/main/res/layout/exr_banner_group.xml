@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fefefe"
+    android:clickable="true"
+    android:orientation="horizontal"
+    >
+
+    <!--Top Profile Section -->
+    <ImageView
+        android:id="@+id/itemImage"
+        android:layout_margin="5dp"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:background="@drawable/primary"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="@dimen/exr_margin"
+        android:layout_marginStart="@dimen/exr_margin"
+        android:layout_weight="1"
+        android:textSize="18sp"
+        android:gravity="center_vertical">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/carbon_groupExpandedIndicator"
+        android:layout_width="@dimen/exr_iconLSize"
+        android:layout_height="@dimen/exr_iconLSize"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="@dimen/exr_margin"
+        android:layout_marginRight="@dimen/exr_margin"
+        android:tint="?colorAccent"
+        app:srcCompat="@drawable/ic_expand_more_48dp" />
+
+</LinearLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    tools:context=".Controllers.SearchActivity">
+
+
+    <include layout="@layout/content_main" />
+
+    <RelativeLayout
+
+        android:background="@color/white"
+
+        android:id="@+id/search_panel"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        >
+        <com.rovaind.academy.Utils.searchbar.MaterialSearchBar
+
+            android:id="@+id/searchBar"
+            style="@style/MaterialSearchBarLight"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            app:mt_navIconEnabled="true"
+            app:mt_placeholder="@string/what_are_u_looking_for" />
+
+
+    </RelativeLayout>
+
+    <TableLayout
+        android:visibility="gone"
+        android:layout_below="@+id/search_panel"
+        android:id="@+id/sortFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/defaultMargin"
+        android:layout_marginRight="@dimen/defaultMargin"
+        android:layout_marginTop="@dimen/defaultMargin"
+        android:divider="@color/white"
+        android:showDividers="middle"
+        android:background="@drawable/rounded_corner"
+        android:minHeight="@dimen/sort_filter_height"
+        android:layout_marginStart="@dimen/defaultMargin"
+        android:layout_marginEnd="@dimen/defaultMargin">
+
+        <TableRow>
+
+            <RelativeLayout
+
+                android:id="@+id/sortLay"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:minHeight="@dimen/sort_filter_height">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:id="@+id/sortIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_sort_white_24dp" />
+
+                    <RelativeLayout
+                        android:layout_toRightOf="@+id/sortIcon"
+                        android:layout_marginLeft="@dimen/defaultMargin"
+                        android:layout_toEndOf="@+id/sortIcon"
+                        android:layout_marginStart="@dimen/defaultMargin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.rovaind.academy.Utils.views.TextViewAr
+                            android:id="@+id/sort"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/sort"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sortMain" />
+
+                        <com.rovaind.academy.Utils.views.TextViewAr
+                            android:id="@+id/sortBy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/sort"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/filter"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sortSub" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:background="@color/sort_bar_divider" />
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/filterLay"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:minHeight="@dimen/sort_filter_height">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:id="@+id/filterIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_filter_white_24dp" />
+
+                    <com.rovaind.academy.Utils.views.TextViewAr
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/defaultMargin"
+                        android:layout_toRightOf="@+id/filterIcon"
+                        android:text="@string/filter"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/filter"
+                        android:layout_toEndOf="@+id/filterIcon"
+                        android:layout_marginStart="@dimen/defaultMargin" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </TableRow>
+    </TableLayout>
+    <androidx.recyclerview.widget.RecyclerView
+
+
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+
+        android:layout_below="@id/sortFilter"
+        android:background="@color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+
+
+
+</RelativeLayout>

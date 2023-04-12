@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ic_house"
+        android:icon="@drawable/ic_house"
+        android:title="@string/home">
+    </item>
+
+
+    <item
+        android:id="@+id/ic_search"
+        android:icon="@drawable/ic_search_24dp"
+        android:title="@string/action_search">
+    </item>
+
+
+
+    <item
+        android:id="@+id/ic_groups"
+        android:icon="@drawable/ic_groups"
+        android:title="@string/my_groups">
+    </item>
+
+    <item
+        android:id="@+id/ic_notification"
+        android:icon="@drawable/ic_notifications"
+        android:title="@string/notification">
+    </item>
+</menu>
