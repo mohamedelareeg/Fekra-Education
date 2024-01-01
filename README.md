@@ -20,9 +20,6 @@ Fekra Education is a native Android application developed in Java that provides 
 - **Material Design Components:** AndroidX libraries for implementing material design components.  
   [Material Design Documentation](https://material.io/develop/android)
 
-
-
-## Additional Libraries and Dependencies
 ## Additional Libraries and Dependencies
 
 - **RecyclerView:** AndroidX library for building complex lists and grids.  
