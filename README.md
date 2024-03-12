@@ -2,6 +2,25 @@
 
 Fekra Education is a native Android application developed in Java that provides an online education platform. The app aims to deliver educational content efficiently and interactively. This README provides an overview of the technologies used and instructions for setting up and running the application.
 
+[<img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" height="60">](https://play.google.com/store/apps/details?id=com.rovaind.fekraeducation)
+
+## Screenshots
+
+<div class="screenshot-grid">
+  <div class="screenshot-item">
+    <img src="1.webp" alt="Screenshot 1">
+  </div>
+  <div class="screenshot-item">
+    <img src="2.webp" alt="Screenshot 2">
+  </div>
+  <div class="screenshot-item">
+    <img src="3.webp" alt="Screenshot 3">
+  </div>
+  <div class="screenshot-item">
+    <img src="4.webp" alt="Screenshot 4">
+  </div>
+</div>
+
 
 ## Fundamental Technologies and Tools
 
@@ -230,3 +249,28 @@ Feel free to contribute to the development of Fekra Education by creating issues
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+<style>
+  .screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+    margin-top: 20px;
+  }
+
+  .screenshot-item {
+    overflow: hidden;
+  }
+
+  .screenshot-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .screenshot-item img:hover {
+    transform: scale(1.1);
+  }
+</style>
