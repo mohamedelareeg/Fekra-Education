@@ -4,23 +4,16 @@ Fekra Education is a native Android application developed in Java that provides 
 
 [<img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" height="60">](https://play.google.com/store/apps/details?id=com.rovaind.fekraeducation)
 
-## Screenshots
+## Table of Contents
 
-<div class="screenshot-grid">
-  <div class="screenshot-item">
-    <img src="1.webp" alt="Screenshot 1">
-  </div>
-  <div class="screenshot-item">
-    <img src="2.webp" alt="Screenshot 2">
-  </div>
-  <div class="screenshot-item">
-    <img src="3.webp" alt="Screenshot 3">
-  </div>
-  <div class="screenshot-item">
-    <img src="4.webp" alt="Screenshot 4">
-  </div>
-</div>
-
+- [Fundamental Technologies and Tools](#fundamental-technologies-and-tools)
+- [Additional Libraries and Dependencies](#additional-libraries-and-dependencies)
+- [How to Run the Application](#how-to-run-the-application)
+- [Configuration](#configuration)
+- [Version Information](#version-information)
+- [Screenshots](#screenshots)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Fundamental Technologies and Tools
 
@@ -241,6 +234,24 @@ Ensure you have the required API keys and configurations for Firebase services. 
 - **Build Tools Version:** 29.0.2
 - **App Version Code:** 6
 - **App Version Name:** 1.1.6
+
+## Screenshots
+
+<div class="screenshot-grid">
+  <div class="screenshot-item">
+    <img src="1.webp" alt="Screenshot 1">
+  </div>
+  <div class="screenshot-item">
+    <img src="2.webp" alt="Screenshot 2">
+  </div>
+  <div class="screenshot-item">
+    <img src="3.webp" alt="Screenshot 3">
+  </div>
+  <div class="screenshot-item">
+    <img src="4.webp" alt="Screenshot 4">
+  </div>
+</div>
+
 
 ## Contributing
 
