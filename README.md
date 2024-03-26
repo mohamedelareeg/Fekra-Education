@@ -260,28 +260,3 @@ Feel free to contribute to the development of Fekra Education by creating issues
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-
-<style>
-  .screenshot-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 20px;
-    margin-top: 20px;
-  }
-
-  .screenshot-item {
-    overflow: hidden;
-  }
-
-  .screenshot-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-
-  .screenshot-item img:hover {
-    transform: scale(1.1);
-  }
-</style>
